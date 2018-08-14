@@ -4,7 +4,6 @@
   "manifest_version": 2,
   "description": "Manage a shortcuts bar visible only on Github",
   "default_locale": "en",
-  "options_page": "src/options_custom/index.html",
   "permissions": [
     "storage"
   ],
