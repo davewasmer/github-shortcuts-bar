@@ -1,0 +1,137 @@
+/**
+ * Place your custom CSS styles here.
+ **/
+
+.gsb-bar {
+  background-color: #2e3842;
+}
+
+.gsb-container {
+  display: flex;
+  align-items: center;
+  max-width: 1012px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 12px 16px;
+}
+
+.gsb-link {
+  color: white;
+  font-weight: 600;
+  opacity: 0.8;
+  display: flex;
+  align-items: center;
+}
+
+.gsb-link:hover {
+  opacity: 1;
+  text-decoration: none;
+}
+
+.gsb-remove-button {
+  visibility: hidden;
+}
+
+.gsb-link-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 1em;
+}
+
+.gsb-link-container:hover .gsb-remove-button {
+  visibility: visible;
+  animation: fade-in 5s ease-out;
+}
+
+.gsb-add-button {
+  margin-left: auto;
+}
+
+.gsb-add-button,
+.gsb-remove-button {
+  background: transparent;
+  color: white;
+  /* border: 1.5px solid white; */
+  /* border-radius: 4px; */
+  border: none;
+  font-size: 11px;
+  line-height: 1;
+  padding: 4px 8px;
+  font-weight: 600;
+  opacity: 0.4;
+}
+
+.gsb-remove-button {
+  width: 1em;
+  height: 1em;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  margin-left: 0.5em;
+  border: none;
+  padding: 0;
+  text-align: center;
+  justify-content: center;
+  font-size: 1.1em;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.gsb-dropdown {
+  display: none;
+  position: absolute;
+  background: #fff;
+  left: 0;
+  top: 100%;
+  border: 1px solid rgba(27,31,35,0.15);
+  border-radius: 4px;
+  box-shadow: 0 3px 12px rgba(27,31,35,0.15);
+  background-clip: padding-box;
+  z-index: 999;
+  width: 150px;
+  color: #25292f;
+  font-size: 12px;
+}
+
+.gsb-dropdown-row {
+  display: flex;
+}
+
+.gsb-dropdown-row + .gsb-dropdown-row {
+  border-top: 1px solid #efefef;
+}
+
+.gsb-dropdown-row-main-link {
+  flex: 1 0 auto;
+  color: inherit;
+  padding: 8px 12px;
+}
+
+.gsb-dropdown-row-new-link {
+  flex: 0 0 auto;
+  width: 2em;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid #efefef;
+}
+
+.gsb-dropdown-row-main-link:hover,
+.gsb-dropdown-row-new-link:hover {
+  text-decoration: none;
+  background-color: #0366d6;
+  color: white;
+}
+
+.gsb-link-container:hover .gsb-dropdown {
+  display: block;
+}
